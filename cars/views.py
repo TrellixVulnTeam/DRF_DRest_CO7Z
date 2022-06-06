@@ -1,3 +1,4 @@
+from email.policy import default
 from django.shortcuts import render
 from rest_framework import generics
 from cars.serializers import CarDetailSerializer, CarListSerializer
@@ -14,7 +15,7 @@ class CarListView(generics.ListAPIView):
     queryset= Car.objects.all()
 
 
-class CarDetailView(generics.RetrieveUpdateDestroyAPIView):
+class CarDetailView(generics.RetrieveUpdateDestroyAPIView):    
     serializer_class= CarDetailSerializer
     queryset= Car.objects.all()
 
