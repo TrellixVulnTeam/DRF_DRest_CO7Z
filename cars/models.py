@@ -5,7 +5,7 @@ User=get_user_model()
 # Create your models here.
 
 class Car(models.Model):
-    vin=models.CharField(max_length=50, verbose_name='Vin',db_index=True)
+    vin=models.CharField(max_length=50, verbose_name='Vin',unique=True,db_index=True) 
     color=models.CharField(max_length=50,verbose_name='color')
     brand=models.CharField(max_length=50,verbose_name='Brand')
     CAR_TYPES =(
@@ -15,4 +15,5 @@ class Car(models.Model):
         (4,'Купе')
     )
     car_type=models.IntegerField(verbose_name='Car_Type',choices=CAR_TYPES)
-    user=models.ForeignKey(User,verbose_name='Use', on_delete=models.CASCADE)
+    user=models.ForeignKey(User,verbose_name='User', on_delete=models.CASCADE)
+
