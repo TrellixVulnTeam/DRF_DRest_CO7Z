@@ -1,9 +1,8 @@
-from email.policy import default
 from django.shortcuts import render
 from rest_framework import generics
 from cars.serializers import CarDetailSerializer, CarListSerializer
 from cars.models import Car
-
+from cars.permissions import IsOwnerOrReadOnly
 # Create your views here.
 
 class CarCreateView(generics.CreateAPIView):
@@ -18,4 +17,5 @@ class CarListView(generics.ListAPIView):
 class CarDetailView(generics.RetrieveUpdateDestroyAPIView):    
     serializer_class= CarDetailSerializer
     queryset= Car.objects.all()
+    permission_classes=(IsOwnerOrReadOnly, )
 
