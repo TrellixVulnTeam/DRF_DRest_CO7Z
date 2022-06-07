@@ -4,7 +4,7 @@ from cars.serializers import CarDetailSerializer, CarListSerializer
 from cars.models import Car
 from cars.permissions import IsOwnerOrReadOnly
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-from rest_framework.authentication import TokenAuthentication
+from rest_framework.authentication import TokenAuthentication #import библиотеки, с помощью которой можно работать с токенами в postman
 # Create your views here.
 
 class CarCreateView(generics.CreateAPIView):
