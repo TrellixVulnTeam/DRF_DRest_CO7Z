@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'cars',
     'djoser',
+    'django.contrib.staticfiles', #for swagger 
+    'drf_yasg',                   #for swagger 
+
 ]
 
 MIDDLEWARE = [
