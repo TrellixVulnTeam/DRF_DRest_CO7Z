@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'cars',
     'djoser',
-    'django.contrib.staticfiles', #for swagger 
-    'drf_yasg',                   #for swagger 
+    # 'django.contrib.staticfiles', #for swagger
+    # 'drf_yasg',                   #for swagger
 
 ]
 
@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'DemoRest.urls'
+ROOT_URLCONF = DRF_DRest.urls
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'DemoRest.wsgi.application'
+WSGI_APPLICATION = 'DRF_DRest.wsgi.application'
 
 
 # Database

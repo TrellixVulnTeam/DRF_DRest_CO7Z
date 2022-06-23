@@ -14,18 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
-
+from django.urls import path, include
+import DRF_DRest.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/cars/', include('cars.urls')),
-    path('api/v1/base-auth/', include('rest_framework.urls')), #login/Log out
+    path('api/v1/base-auth/', include('rest_framework.urls')),  # login/Log out
     path('api/v1/auth/', include('djoser.urls')),
     path('api/v1/auth_token/', include('djoser.urls.authtoken')),
 
 ]
-                                            #нужно разобраться со swagger!!!!!!!!!
-                                            
+# нужно разобраться со swagger!!!!!!!!!
+
 # from django.urls import path, include, re_path
 # from drf_yasg.views import get_schema_view
 # from drf_yasg import openapi
@@ -53,4 +53,4 @@ urlpatterns = [
 #    ...
 # ]
 
-                                            #нужно разобраться со swagger!!!!!!!!!
+# нужно разобраться со swagger!!!!!!!!!
